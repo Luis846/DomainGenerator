@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Domain Generator</h1>
+    <div id="Domains" style="color: red; font-weight: bold;">
+
+        <ul id="some"></ul>
+
+    </div>
+    <script>
+let pronoun = [' The',' Our'];
+let adj = ['great', 'big' ];
+let noun = ['jogger','racoon'];
+
+let finalSentence = "<ul>";
+
+
+
+
+for (let i = 0; i < pronoun.length; i++) {
+        for(let x = 0; x < adj.length; x++) {
+            for(let j = 0; j < noun.length; j++){
+                finalSentence += "<li>"+pronoun[i]+adj[x]+noun[j] + ".com</li>";
+            }
+        }
+    }finalSentence += "<ul>"
+    document.getElementById("Domains").innerHTML = finalSentence;
+
+//finalSentence.map( e => "<li>"+pronoun[i]+"</li>")
+
+
+
+    </script>
+</body>
+</html>
